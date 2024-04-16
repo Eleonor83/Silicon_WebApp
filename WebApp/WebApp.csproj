@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\images\uploads\profiles\" />
   </ItemGroup>
 
   <ItemGroup>

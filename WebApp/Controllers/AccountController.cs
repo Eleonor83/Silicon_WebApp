@@ -50,12 +50,12 @@ public class AccountController(UserManager<UserEntity> userManager, ApplicationC
             var user = await _userManager.GetUserAsync(User);
              if (user != null)
             {
-                user.FirstName = user.FirstName;
-                user.LastName = user.LastName;
-                user.Email = user.Email;
-                user.PhoneNumber = user.PhoneNumber;
-                user.UserName   = user.Email;
-                user.Bio = user.Bio;
+                user.FirstName = model.Basic!.FirstName;
+                user.LastName = model.Basic!.LastName;
+                user.Email = model.Basic!.Email;
+                user.PhoneNumber = model.Basic!.PhoneNumber;
+                user.UserName   = model.Basic!.Email;
+                user.Bio = model.Basic!.Bio;
 
                 var result = await _userManager.UpdateAsync(user);
                 if (result.Succeeded)
@@ -120,6 +120,36 @@ public class AccountController(UserManager<UserEntity> userManager, ApplicationC
         {
             TempData["StatusMessage"] = "Unable to save adress information.";
         }
+
         return RedirectToAction("Details", "Account");
     }
+
+
+
+    [HttpPost]
+    public async Task<IActionResult> UploadProfileImage (IFormFile file)
+    {
+        var user = await _userManager.GetUserAsync(User);
+
+        if (user != null && file !=null && file.Length != 0)
+        { 
+            var fileName = $"p_{user.Id}_{Guid.NewGuid()}{Path.GetExtension(file.FileName)}";
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(),"www.root/images/uploads/profiles", fileName);
+
+            using var fs = new FileStream(filePath, FileMode.Create);
+            await file.CopyToAsync(fs);
+
+            user.ProfileImage = fileName;
+            await _userManager.UpdateAsync(user);
+        }
+        else
+        {
+            TempData["StatusMessage"] = "Unable to update profile image ";
+        }
+
+        return RedirectToAction("Details", "Account");
+    }
+
 }
+
+
