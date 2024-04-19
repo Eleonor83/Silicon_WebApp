@@ -11,7 +11,7 @@
                 <img src="~/images/uploads/profiles/@user.ProfileImage" alt="@user.FirstName @user.LastName"/>
 
                 <form enctype="multipart/form-data" method="post" asp-action="UploadProfileImage" asp-controller="Account">
-                    <input id="fileUploder" type="file" name="file" hidden/>
+                    <input id="fileUploader" type="file" name="file" hidden/>
                     <label for="fileUploader" class="btn btn-circle btn-circle-sm"><i class="fa-regular fa-refresh"></i></label>
                 </form>
             </div>

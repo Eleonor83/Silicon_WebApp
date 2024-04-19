@@ -107,8 +107,7 @@ public class AccountController(UserManager<UserEntity> userManager, ApplicationC
                     _context.Update(user);
                     await _context.SaveChangesAsync();
 
-                    TempData["StatusMessage"] = "Updated basic adress successfully";
-
+                    TempData["StatusMessage"] = "Updated adress information successfully.";
                 }
                 catch
                 {
@@ -134,7 +133,7 @@ public class AccountController(UserManager<UserEntity> userManager, ApplicationC
         if (user != null && file !=null && file.Length != 0)
         { 
             var fileName = $"p_{user.Id}_{Guid.NewGuid()}{Path.GetExtension(file.FileName)}";
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(),"www.root/images/uploads/profiles", fileName);
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot/images/uploads/profiles", fileName);
 
             using var fs = new FileStream(filePath, FileMode.Create);
             await file.CopyToAsync(fs);

@@ -36,7 +36,7 @@ public class AccountAdressInfo
     [Required]
     [Display(Name = "Adress line 1", Prompt = "Enter your first adress line")]
     public string AdressLine_1 { get; set; } = null!;
-    [Required]
+    
     [Display(Name = "Adress line 2", Prompt = "Enter your second adress line")]
     public string? AdressLine_2 { get; set; }
     [Required]

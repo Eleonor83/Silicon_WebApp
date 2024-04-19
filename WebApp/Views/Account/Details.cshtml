@@ -13,7 +13,7 @@
             @if (!string.IsNullOrEmpty(TempData["StatusMessage"]?.ToString()))
             {
                 <div class="alert alert-danger">
-                    @ViewData["StatusMessage"]
+                    @TempData["StatusMessage"]
                 </div>
             }
 

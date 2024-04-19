@@ -2,3 +2,5 @@
 @using WebApp.ViewModels
 @using Infrastructure.Entities
 @using Microsoft.AspNetCore.Identity
+@inject UserManager<UserEntity> SignInManager
+@inject SignInManager<UserEntity> SignInManager

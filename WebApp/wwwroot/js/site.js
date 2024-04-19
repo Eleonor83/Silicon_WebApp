@@ -6,7 +6,7 @@ function handleProfileImageUpload() {
     try {
 
         let fileUploader = document.querySelector('#fileUploader')
-        if (fileUploader != undefined) {
+        if (fileUploader != null) {
             fileUploader.addEventListener('change', function () {
                 if (this.files.length > 0) {
                     this.form.submit()
@@ -14,5 +14,8 @@ function handleProfileImageUpload() {
             })
         }
     }
-    catch { }
+    catch (error)
+    {
+        console.error('Error handling profile image upload:', error);
+    }
 }
