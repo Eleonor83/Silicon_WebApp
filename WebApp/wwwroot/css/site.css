@@ -258,16 +258,19 @@ h6, .h6 {
   color: var(--color-gray-800);
 }
 
-.btn-theme {
-  border-radius: 6px;
-  text-align: center;
-  font-size: 14px;
-  padding: 8px 28px;
+.btn {
+  outline: none;
+  transition: background 0.15s ease-in-out, color 0.15s ease-in-out;
+  border-radius: 8px;
+  padding: 12px 25px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
   text-decoration: none;
+}
+
+.btn-theme {
+  /*@include button;*/
   background: #6366F1;
   color: #FFFFFF;
   border: none;
@@ -279,15 +282,6 @@ h6, .h6 {
 }
 
 .btn-theme-s {
-  border-radius: 6px;
-  text-align: center;
-  font-size: 14px;
-  padding: 8px 28px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
   box-shadow: 0px 8px 18px -8px rgba(99, 102, 241, 0.9);
   background: #6366F1;
   color: #FFFFFF;
@@ -302,15 +296,6 @@ h6, .h6 {
 }
 
 .btn-gray {
-  border-radius: 6px;
-  text-align: center;
-  font-size: 14px;
-  padding: 8px 28px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
   background: #EFF2FC;
   color: #33354D;
   border: none;
@@ -322,15 +307,6 @@ h6, .h6 {
 }
 
 .btn-transparent {
-  border-radius: 6px;
-  text-align: center;
-  font-size: 14px;
-  padding: 8px 28px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
   background: transparent;
   color: #33354D;
   border: none;
@@ -404,11 +380,7 @@ h6, .h6 {
 }
 
 .btn-social {
-  line-height: 160%;
-  font-weight: 400;
-  color: #565973;
-  font-family: "Manrope", sans-serif;
-  font-size: 16px !important;
+  /*@include text-m;*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -426,15 +398,6 @@ h6, .h6 {
 }
 
 .btn-mobilemenu {
-  border-radius: 6px;
-  text-align: center;
-  font-size: 14px;
-  padding: 8px 28px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
   background: transparent;
   color: #33354D;
   border: none;
@@ -462,7 +425,7 @@ h6, .h6 {
 textarea,
 select,
 input:not([type=checkbox]) {
-  min-width: 300;
+  min-width: 300px;
   font-size: 16px;
   font-family: "manrope";
   font-weight: 400 !important;
@@ -607,88 +570,47 @@ a:hover {
   color: #FFFFFF;
 }
 
-.dont-want-to-miss {
-  background-color: #F3F6FF;
+#subscribe {
+  background-color: var(--color-gray-100);
+  padding: 4rem 0;
 }
-.dont-want-to-miss .content {
-  display: block;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 100px 100px 100px 100px;
+#subscribe .container {
+  width: 55%;
 }
-.dont-want-to-miss .content .title {
+#subscribe .container .title {
   display: flex;
-  justify-content: left;
-  padding: 20px;
-  gap: 20px;
-}
-.dont-want-to-miss .content .mainbox {
-  display: flex;
-  justify-content: left;
-  gap: 70px;
-}
-.dont-want-to-miss .content .mainbox .boxtitle {
-  padding-bottom: 50px;
-}
-.dont-want-to-miss .content .mainbox .boxes {
-  display: flex;
-  justify-content: left;
-  align-items: left;
-  text-align: left;
-  gap: 70px;
-  padding-bottom: 40px;
-}
-.dont-want-to-miss .content .mainbox .boxes .box {
-  padding-top: 10px;
-}
-.dont-want-to-miss .content .suscribe {
-  display: flex;
-  justify-content: left;
   align-items: center;
   gap: 20px;
 }
-.dont-want-to-miss .content .suscribe .iconenvelope {
-  background-image: url(/Images/envelope.png);
-  background-repeat: no-repeat;
-  background-position: 10px center;
-  padding-left: 40px;
-  width: 50%;
-  border-radius: 8px;
-  border: 2px solid #e5e2e2;
-  padding-top: 12px;
-  padding-bottom: 12px;
+#subscribe .container .title h2 {
+  font-size: 2.5rem;
 }
-.dont-want-to-miss .content .terms {
-  display: flex;
+#subscribe .container form .alternative {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
 }
-@media (max-width: 572px) {
-  .dont-want-to-miss .container p {
-    font-size: 10px;
-    text-align: left;
-    margin-left: 0;
-  }
+#subscribe .container form .alternative .options {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
-@media (max-width: 992) {
-  .dont-want-to-miss .checkbox {
-    display: block;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  .dont-want-to-miss .suscribe {
-    display: block;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 30px;
-  }
-  .dont-want-to-miss .suscribe button {
-    margin: 30px;
-  }
-  .dont-want-to-miss .container p {
-    padding: 20px;
-    margin-left: 100px;
-  }
+#subscribe .container form .form-email {
+  display: grid;
+  align-items: start;
+  grid-template-columns: 1fr auto;
+  gap: 1.5rem;
+}
+#subscribe .container form .form-email .input-group {
+  position: relative;
+}
+#subscribe .container form .form-email .input-group i {
+  position: absolute;
+  left: 20px;
+  top: 17px;
+  font-size: 1.3rem;
+}
+#subscribe .container form .form-email .input-group input {
+  padding-left: 55px;
 }
 
 .download-our-app {
@@ -1119,4 +1041,86 @@ header .container .account-buttons .profile .profile-image form label {
 }
 .showcase .container .content .brands img {
   width: 120px;
+}
+
+.signin {
+  margin-top: 30px;
+}
+.signin .container {
+  width: 35%;
+}
+.signin .container form input {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.signin .container form .form-content {
+  margin-top: 30px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "email" "password" "remember" "submit";
+}
+.signin .container form .input-group label {
+  padding: 3px;
+}
+.signin .container form .checkbox-group {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.signin .container form #form-email {
+  grid-area: email;
+}
+.signin .container form #form-password {
+  grid-area: password;
+}
+.signin .container form #form-checkbox {
+  grid-area: remember;
+}
+.signin .container form #form-button {
+  grid-area: submit;
+}
+
+.signup {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signup .container {
+  width: 40%;
+}
+.signup .container form .form-content {
+  margin-top: 30px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "firstname lastname" "email email" "password confirm" "terms terms" "submit submit";
+}
+.signup .container form .input-group label {
+  padding: 3px;
+}
+.signup .container form .checkbox-group {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.signup .container form #form-firstName {
+  grid-area: firstname;
+}
+.signup .container form #form.lastName {
+  grid-area: lastname;
+}
+.signup .container form #form-email {
+  grid-area: email;
+}
+.signup .container form #form-password {
+  grid-area: password;
+}
+.signup .container form #form-confirmpassword {
+  grid-area: confirm;
+}
+.signup .container form #form-checkbox {
+  grid-area: terms;
+}
+.signup .container form #form-button {
+  grid-area: submit;
 }

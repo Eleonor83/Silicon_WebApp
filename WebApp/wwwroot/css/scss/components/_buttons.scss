@@ -39,7 +39,7 @@
 }
 
 .btn-gray { 
-    @include button;
+
     background: $gray-200;
     color: $gray-800;
     border: none;
@@ -52,7 +52,7 @@
 }
 
 .btn-transparent {
-    @include button;
+
     background: $transparent;
     color: $gray-800;
     border: none;
@@ -151,7 +151,7 @@
 }
 
 .btn-mobilemenu {
-    @include button;
+
     background: $transparent;
     color: $gray-800;
     border: none;
