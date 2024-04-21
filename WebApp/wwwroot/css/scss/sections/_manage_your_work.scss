@@ -1,0 +1,32 @@
+.manage-your-work{
+    margin-bottom: 100px;
+    
+    .myw{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+    }
+
+    .manage-your-work-image{
+
+    }
+    .managework {
+        justify-content: left;
+        margin-left: 170px;
+        
+        img{
+            margin-right: 7px;
+        }
+        h2{
+            padding-bottom: 20px;
+        }
+
+        .btn-theme-s {
+            display: inline-block;
+            margin-top: 20px;
+        }
+    }
+
+
+}

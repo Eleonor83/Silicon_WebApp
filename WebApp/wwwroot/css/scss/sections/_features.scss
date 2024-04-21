@@ -1,0 +1,78 @@
+
+.features {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	background-color: $gray-100;
+	padding: 100px 0px 170px 0px;
+
+	.toolbox {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		.tool-features {
+			display: grid;
+			grid-template-columns: repeat 3, 1fr;
+			margin-top: 30px;
+
+			.box {
+				text-align: center;
+				padding: 27px;
+
+				&:hover {
+                    background-color: #ffffff;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    transform: translateY(-5px);
+                }
+
+				img {
+					margin-top: 20px;
+				}
+
+				h5{
+					margin-top: 5px;
+				}
+			}
+
+			.downline {
+				border-bottom: 1px solid $gray-300;
+			}
+
+			.sideline {
+				border-right: 1px solid $gray-300;
+			}
+		}
+	}
+}
+.tool-features {
+	display: grid;
+	align-items: center;
+	grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 575px) {
+	.tool-features {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+@media (min-width: 576px) {
+	.tool-features {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+@media (min-width: 768px) {
+	.tool-features {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+@media (min-width: 970px) and (max-width: 1199px) {
+	.tool-features {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media (min-width: 1200px) {
+	.tool-features {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+

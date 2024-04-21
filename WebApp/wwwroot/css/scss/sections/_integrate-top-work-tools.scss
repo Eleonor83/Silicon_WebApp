@@ -1,0 +1,28 @@
+.integrate-top-work-tools {
+
+    .one {
+        display: block;
+        justify-content: center;
+        padding: 50px;
+        margin-top: 100px;
+
+        .worktools {
+            text-align: center;
+            padding: 60px;
+            margin: 80px;
+        }
+
+        .toolbox {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+
+            .tool {
+
+                img {
+                    padding-bottom: 30px;
+                }
+            }
+        }
+    }
+}

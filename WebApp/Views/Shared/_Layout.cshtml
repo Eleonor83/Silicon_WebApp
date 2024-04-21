@@ -8,7 +8,14 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
 <body>
-    @RenderBody()
+    <div class="wrapper">
+        <partial name="_Header" />
+        <main>
+            @RenderBody()
+        </main>
+        <partial name="_Footer" />
+
+    </div>
 
     <script src="~/js/site.js" asp-append-version="true"></script>
 </body>
