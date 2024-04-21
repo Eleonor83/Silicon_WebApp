@@ -1135,7 +1135,7 @@ header .container .account-buttons .profile .profile-image form label {
   align-items: center;
   margin-bottom: 1rem;
 }
-.courses .container .header #form-filters {
+.courses .container #form-filters {
   display: flex;
   justify-content: flex-end;
   align-items: center;

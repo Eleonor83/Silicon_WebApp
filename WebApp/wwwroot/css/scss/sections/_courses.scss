@@ -9,21 +9,21 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 1rem;
+        }
 
-            h1 {
+        h1 {
+        }
+
+        #form-filters {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 1.5rem;
+
+            select {
             }
 
-            #form-filters {
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-                gap: 1.5rem;
-
-                select {
-                }
-
-                input-search-group {
-                }
+            input-search-group {
             }
         }
 
@@ -44,7 +44,6 @@
                 &:hover {
                     box-shadow: 0 0 14px -4px var(--color-gray-900);
                 }
-
             }
         }
     }
